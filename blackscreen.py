@@ -5,7 +5,7 @@ import numpy as np
 cap=cv2.VideoCapture(0)
 image=cv2.imread("bg.jpg")
 
-while True:
+while (cap.isOpened()):
     ret,frame=cap.read()
 
     frame=cv2.resize(frame,(640,480))
