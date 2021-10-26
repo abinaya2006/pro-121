@@ -11,8 +11,8 @@ while (cap.isOpened()):
     frame=cv2.resize(frame,(640,480))
     image=cv2.resize(image,(640,480))
 
-    l_black=np.array([104,153,70])
-    u_black=np.array([30,30,0])
+    l_black=np.array([30,30,0])
+    u_black=np.array([104,153,70])
 
     mask=cv2.inRange(frame,l_black,u_black)
     res=cv2.bitwise_and(frame,frame,mask=mask)
